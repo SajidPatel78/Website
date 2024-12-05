@@ -1,0 +1,170 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
+header {
+    background: #333;
+    color: #fff;
+    padding: 1rem 0;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    margin: auto;
+}
+
+.logo {
+    font-size: 1.5rem;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+}
+
+nav ul li {
+    margin: 0 1rem;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.hero {
+    background: url('hero-bg.jpg') no-repeat center center/cover;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    text-align: center;
+    padding: 0 2rem;
+}
+
+.hero-content h2 {
+    font-size: 3rem;
+}
+
+.btn {
+    background: #f04;
+    color: #fff;
+    padding: 0.5rem 1rem;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.categories {
+    padding: 2rem;
+    background: #f4f4f4;
+}
+
+.category-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+}
+
+.category-item {
+    background: #fff;
+    padding: 1rem;
+    border-radius: 5px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    padding: 25px;
+    box-shadow: 0 5px 8px rgba(0, 0, 0, 0.1);
+}
+
+.category-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2);
+}
+
+.about {
+    padding: 2rem;
+    text-align: center;
+    background: #333;
+    color: #fff;
+}
+
+footer {
+    text-align: center;
+    padding: 1rem;
+    background: #222;
+    color: #fff;
+}
+
+/* Base styles for responsiveness */
+* {
+    box-sizing: border-box;
+}
+
+/* Mobile Styles (For devices with a width of 768px or less) */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    nav ul {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    nav ul li {
+        margin: 0.5rem 0;
+    }
+
+    .hero {
+        padding: 1rem;
+        text-align: center;
+    }
+
+    .hero-content h2 {
+        font-size: 2rem;
+    }
+
+    .category-grid {
+        grid-template-columns: 1fr;
+        /* Stack items vertically */
+    }
+
+    .categories,
+    .about {
+        padding: 1rem;
+    }
+
+    .category-item {
+        font-size: 0.9rem;
+    }
+
+    footer p {
+        font-size: 0.9rem;
+    }
+}
+
+/* Small Mobile Styles (For devices with a width of 480px or less) */
+@media (max-width: 480px) {
+    .logo {
+        font-size: 1.2rem;
+    }
+
+    .hero-content h2 {
+        font-size: 1.8rem;
+    }
+
+    .btn {
+        font-size: 0.9rem;
+        padding: 0.4rem 0.8rem;
+    }
+
+    .category-item h3 {
+        font-size: 1rem;
+    }
+}
